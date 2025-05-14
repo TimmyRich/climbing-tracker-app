@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button, Modal } from 'react-native';
 import QRCode from 'react-native-qrcode-svg'; // Use react-native-qrcode-svg
+import { CLIMBER_LOGIN } from '../secrets';
 
 export default function App() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -31,7 +32,7 @@ export default function App() {
             <Text style={styles.modalText}>Your QR Code</Text>
             {/* QR Code Component */}
             <View style={styles.qrCodePlaceholder}>
-              <QRCode value="432e6baa-4ec1-48bd-9064-d29d1657ec62" size={150}/>
+              <QRCode value={CLIMBER_LOGIN} size={150}/> 
             </View>
             <Button
               title="Close"
