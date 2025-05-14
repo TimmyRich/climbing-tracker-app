@@ -4,6 +4,7 @@ The begginnning of my climbing tracker app.
 
 ## Features
 
+- Easy access to climber login
 - Log climbs
 - Track climbing progress
 - View climbing history
