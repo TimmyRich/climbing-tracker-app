@@ -69,16 +69,12 @@ const styles = StyleSheet.create({
     fontFamily: 'arial',
     textTransform: 'uppercase',
   },
-
-  // 🆕 Wrapping container for all buttons
   buttonContainer: {
     paddingTop: 20,
     paddingHorizontal: 20,
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-
-  // 🆕 Spacing for individual buttons
   buttonWrapper: {
     marginBottom: 10,
     width: "50%"
