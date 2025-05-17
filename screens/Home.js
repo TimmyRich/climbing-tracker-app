@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, SafeAreaView, Button, Modal } from 'react-native';
 import ClimberLogin from '../components/ClimberLogin';
 
-export default function App() {
+export default function Home({ navigation }) {
   const [modalVisible, setModalVisible] = useState(false); // Use state hook to toggle modal visibility
 
   return (
@@ -28,7 +28,7 @@ export default function App() {
         <View style={styles.buttonWrapper}>
           <Button
             title="Show Climbing Log"
-            onPress={() => console.log("Show Climbing Log")}
+            onPress={() => navigation.navigate('ClimbLog')}
           />
         </View>
 
