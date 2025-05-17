@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
   return (
     <SafeAreaView style={styles.safeArea}>
 
-      {/* Page Title */}
+      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.titleFont}>Climbing Tracker</Text>
       </View>
