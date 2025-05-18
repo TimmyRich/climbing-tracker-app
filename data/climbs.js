@@ -3,14 +3,14 @@ export const URBAN_CLIMB_GYMS = [
   "Milton",
   "West End",
   "Newstead"
-]
+];
 
 // Locations within a gym
 export const GYM_ZONES = new Map([
   ["Milton", ["The Cave"]],
   ["West End", ["Stronarch"]],
   ["Newstead", ["Big Bulge"]]
-])
+]);
 
 // Grade/Difficulty of a climb
 export const GRADES = [ // Wish this could be an enum :(
@@ -22,7 +22,7 @@ export const GRADES = [ // Wish this could be an enum :(
   "Red",
   "Black",
   "White"
-]
+];
 
 /**
  * Represents a climbing route at an Urban Climb gym.
@@ -58,10 +58,16 @@ export class Climb {
     }
     //TODO add date validator
 
-    // if no date was entered use current date
-    if (date == null) {
-      date = new Date();
+    // If no date provided, use current date
+  if (!date) {
+    date = new Date();
+  } else {
+    date = new Date(date);
+    if (isNaN(date.getTime())) {
+      throw new Error(`Invalid date: ${date}`);
     }
+  }
+    
 
     this.gym = gym;
     this.zone = zone;
