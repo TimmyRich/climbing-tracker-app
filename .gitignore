@@ -38,3 +38,4 @@ yarn-error.*
 
 # Personal Secrets
 secrets.js
+data/climbtest.js
