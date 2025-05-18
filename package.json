@@ -2,6 +2,7 @@
   "name": "climbing-tracker",
   "version": "1.0.0",
   "main": "app.js",
+  "type": "module",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
